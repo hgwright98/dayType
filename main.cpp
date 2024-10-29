@@ -25,42 +25,42 @@ int main() {
         while (day < 0 || day > 6);
     }
   // This pulls the varaible from above and makes that number the current day
-    dayType monday(day);
+    dayType days(day);
     cout << "" << endl;
     cout << "Current day based on user input:" << endl;
-    monday.printCurrentDay(); 
+    days.printCurrentDay(); 
     cout << endl;
 
     // This tests the next day mutator that will advance the current day to the next one whose index is "day" + 1
     cout << "Next day:" << endl;
-    monday.nextDay();
-    monday.printCurrentDay();
+    days.nextDay();
+    days.printCurrentDay();
     cout << endl;
 
     // This tests the previous day mutator that will move the current day to the previous one whose index is "day"
     cout << "Previous day:" << endl;
-    monday.previousDay();
-    monday.printCurrentDay();
+    days.previousDay();
+    days.printCurrentDay();
     cout << endl;
 
     // This just sets the current day to Monday which is index 1 and then adds 4 days which means it will print friday
-    monday.setCurrentDay(1);
-    monday.addDays(4); // Add 4 days
+    days.setCurrentDay(1);
+    days.addDays(4); // Add 4 days
     cout << "Set current day to Monday and add 4 days:" << endl;
-    monday.printCurrentDay();
+    days.printCurrentDay();
     cout << endl;
 
     // This sets the current day to Tuesday and adds 13 days which means it wil print monday
-    monday.setCurrentDay(2); 
-    monday.addDays(13); 
+    days.setCurrentDay(2); 
+    days.addDays(13); 
     cout << "Set current day to Tuesday and add 13 days:" << endl;
-    monday.printCurrentDay(); 
+    days.printCurrentDay(); 
     cout << endl;
 
     // This makes the index out of the range and make it issue an error using out_of_range functiono
     cout << "Trying to set current day to an invalid index (10):" << endl;
-    monday.setCurrentDay(10); 
-    monday.printCurrentDay(); 
+    days.setCurrentDay(10); 
+    days.printCurrentDay(); 
     cout << endl;
 
     return 0;
